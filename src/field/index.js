@@ -16,6 +16,13 @@ const templates = {
 }
 
 // TODO this should be the only exported function
+/**
+ * generate a collection of esri field objects based on metadata or from inspection of a sample feature
+ * @param {object} data
+ * @param {string} requestContext
+ * @param {object} options
+ * @return {[object]}
+ */
 function computeFieldsCollection (data, requestContext, options = {}) {
   const metadata = data.metadata || {}
   const feature = data.features && data.features[0]

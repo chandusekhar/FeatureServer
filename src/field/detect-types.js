@@ -20,16 +20,6 @@ function detectType (value) {
 }
 
 /**
- * returns esri field data type based on type of value passed
- *
- * @param {*} value - object to evaluate
- * @return {string} esri field type
- */
-function detectEsriTypeFromValue (value) {
-  return esriTypeMap(detectType(value))
-}
-
-/**
  * returns converts type to ESRI field type
  * @param {string} type string representation of data type
  * @return {string} string representation of ESRI data type
@@ -47,4 +37,4 @@ function esriTypeMap (type) {
   }
 }
 
-module.exports = { detectType, detectEsriTypeFromValue, esriTypeMap }
+module.exports = { detectType, esriTypeMap }
